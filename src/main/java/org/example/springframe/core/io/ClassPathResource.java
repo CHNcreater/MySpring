@@ -2,6 +2,8 @@ package org.example.springframe.core.io;
 
 import cn.hutool.core.lang.Assert;
 import org.example.springframe.utils.ClassUtils;
+
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -23,6 +25,10 @@ public class ClassPathResource implements Resource{
 
     @Override
     public InputStream getInputStream() throws IOException {
-        return null;
+        InputStream resourceAsStream = classLoader.getResourceAsStream(path);
+        if (resourceAsStream == null) {
+            throw new FileNotFoundException(this.path + "cannot be opened because it does not exist");
+        }
+        return resourceAsStream;
     }
 }
