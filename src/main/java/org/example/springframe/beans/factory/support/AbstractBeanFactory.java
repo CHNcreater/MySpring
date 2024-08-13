@@ -1,6 +1,6 @@
 package org.example.springframe.beans.factory.support;
 
-import org.example.BeansException;
+import org.example.springframe.beans.BeansException;
 import org.example.springframe.beans.factory.BeanFactory;
 import org.example.springframe.beans.factory.config.BeanDefinition;
 

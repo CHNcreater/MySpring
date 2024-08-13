@@ -2,7 +2,7 @@ package org.example.springframe.beans.factory.support;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.NoOp;
-import org.example.BeansException;
+import org.example.springframe.beans.BeansException;
 import org.example.springframe.beans.factory.config.BeanDefinition;
 
 import java.lang.reflect.Constructor;
