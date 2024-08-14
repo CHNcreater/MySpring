@@ -1,4 +1,4 @@
-package org.example.springframework.test.bean;
+package org.example.springframe.test.bean;
 
 import java.util.HashMap;
 import java.util.Map;

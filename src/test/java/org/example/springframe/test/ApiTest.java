@@ -1,4 +1,4 @@
-package org.example.springframework.test;
+package org.example.springframe.test;
 
 import org.example.springframe.beans.BeansException;
 import org.example.springframe.beans.PropertyValue;
@@ -8,8 +8,8 @@ import org.example.springframe.beans.factory.config.BeanReference;
 import org.example.springframe.beans.factory.support.CglibSubclassingInstantiationStrategy;
 import org.example.springframe.beans.factory.support.DefaultListableBeanFactory;
 import org.example.springframe.beans.factory.support.SimpleInstantiationStrategy;
-import org.example.springframework.test.bean.UserDao;
-import org.example.springframework.test.bean.UserService;
+import org.example.springframe.test.bean.UserService;
+import org.example.springframe.test.bean.UserDao;
 import org.junit.jupiter.api.Test;
 
 public class ApiTest {
