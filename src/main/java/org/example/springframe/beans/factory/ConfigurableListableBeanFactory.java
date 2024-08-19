@@ -6,7 +6,9 @@ import java.util.Map;
 
 public interface ConfigurableListableBeanFactory extends ListableBeanFactory, ConfigurableBeanFactory, AutowireCapableBeanFactory {
 
-    public BeanDefinition getBeanDefinition(String beanName);
+//    public BeanDefinition getBeanDefinition(String beanName);
 
     public void addBeanPostProcessor(BeanPostProcessor beanPostProcessor);
+
+    public void preInstantiateSingletons();
 }

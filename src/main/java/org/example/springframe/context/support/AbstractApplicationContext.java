@@ -13,7 +13,16 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
 
     @Override
     public void refresh() throws BeansException {
-
+        //1. Create Bean Factory and load BeanDefinition
+        refreshBeanFactory();
+        //2. Get BeanFactory
+        ConfigurableListableBeanFactory beanFactory = getBeanFactory();
+        //3. Execute BeanFactoryPostProcessor before Bean Instantiation
+        invokeBeanFactoryPostProcessors(beanFactory);
+        //4. Register BeanPostProcessor before bean instantiation
+        registerBeanPostProcessors(beanFactory);
+        //5. pre instantiate bean object
+        beanFactory.preInstantiateSingletons();
     }
 
     protected abstract void refreshBeanFactory() throws BeansException;
